@@ -1,0 +1,258 @@
+/* KLogin Light Theme - Simple & Elegant */
+
+:root {
+    --bg-color: #fafafa;
+    --card-bg: #ffffff;
+    --text-primary: #1c1c1e;
+    --text-secondary: #6e6e73;
+    --accent: #2c3e50;
+    /* Dark slate for elegance */
+    --accent-blue: #007aff;
+    /* System blue style */
+    --border: #e5e5ea;
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+    --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    -webkit-font-smoothing: antialiased;
+}
+
+.background-pattern {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: radial-gradient(#e1e1e6 1px, transparent 1px);
+    background-size: 24px 24px;
+    opacity: 0.4;
+    mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+}
+
+.container {
+    width: 100%;
+    max-width: 420px;
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Header & Logo */
+.app-logo {
+    height: 80px;
+    /* Reduced since the text is likely in the logo or underneath */
+    width: auto;
+    object-fit: contain;
+    margin-bottom: 0.5rem;
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.08));
+}
+
+/* Hero Typography */
+.hero-title {
+    font-size: 2.25rem;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+    line-height: 1.1;
+}
+
+.hero-description {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.hero-description strong {
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+/* Download Card */
+.card {
+    background: var(--card-bg);
+    border-radius: 20px;
+    padding: 1.25rem;
+    box-shadow: var(--shadow-md);
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+}
+
+.card-content h3 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 0.2rem;
+}
+
+.card-content p {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.download-btn {
+    background-color: var(--text-primary);
+    color: white;
+    text-decoration: none;
+    padding: 0.75rem 1.25rem;
+    border-radius: 99px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: background-color 0.2s ease;
+}
+
+.download-btn:hover {
+    background-color: #000;
+}
+
+.download-btn svg {
+    width: 18px;
+    height: 18px;
+}
+
+.status-text {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    opacity: 0.7;
+}
+
+/* Release Notes */
+.release-notes {
+    background: rgba(0, 122, 255, 0.05);
+    border-radius: 16px;
+    padding: 1rem 1.25rem;
+    text-align: left;
+    border: 1px solid rgba(0, 122, 255, 0.1);
+}
+
+.release-notes h4 {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+}
+
+.release-notes ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.release-notes li {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.release-notes li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--accent-blue);
+    font-weight: 600;
+}
+
+.release-notes li strong {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+/* Network Status Indicator */
+.network-status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: rgba(0, 0, 0, 0.03);
+    border-radius: 99px;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    margin: 0 auto;
+}
+
+.status-dot {
+    width: 6px;
+    height: 6px;
+    background-color: #34c759;
+    /* Apple Green */
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px rgba(52, 199, 89, 0.2);
+}
+
+/* Footer */
+.footer {
+    position: absolute;
+    bottom: 2rem;
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    width: 100%;
+    text-align: center;
+    opacity: 0.6;
+}
+
+.author {
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+/* Responsive */
+@media (max-height: 700px) {
+    .container {
+        padding-top: 1rem;
+    }
+
+    .footer {
+        position: static;
+        margin-top: 3rem;
+    }
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="klogin - The simple WiFi portal login app for MHB2.">
+    <title>KLogin | WiFi Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="background-pattern"></div>
+
+    <main class="container">
+        <header class="header">
+            <div class="logo-container">
+                <img src="logo.png" alt="KLogin Logo" class="app-logo">
+            </div>
+        </header>
+
+        <section class="hero">
+            <h1 class="hero-title">Simply Connected.</h1>
+            <p class="hero-description">
+                The effortless way to sign in to your college WiFi.
+                <br>Currently available for <strong>MHB2</strong>.
+            </p>
+        </section>
+
+        <!-- Removed the features grid for simplicity as requested -->
+
+        <section class="download-section">
+            <div class="card">
+                <div class="card-content">
+                    <h3>Get klogin</h3>
+                    <p>Version 2.0 • Android</p>
+                </div>
+                <a href="https://github.com/donadhi-kamesh/klogin-app/releases/download/2.0/app-release.apk"
+                    class="download-btn" id="downloadBtn">
+                    Download
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="release-notes">
+                <h4>🆕 What's New in v2.0</h4>
+                <ul>
+                    <li><strong>One-Click Login Enhanced:</strong> Just open the app — it automatically does everything.
+                        Simply go and experience!</li>
+                    <li><strong>Fixed:</strong> Mobile data should be off issue resolved.</li>
+                </ul>
+            </div>
+
+            <section class="network-status">
+                <span class="status-dot"></span>
+                <span>MHB2 Supported</span>
+            </section>
+    </main>
+
+    <footer class="footer">
+        <p>by <span class="author">DK</span></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
